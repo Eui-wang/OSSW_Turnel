@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lan = "ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel = "stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+        <section class = "login-form">
+            <h1>Turnel</h1>
+            <form action = "">
+                <div class="int-area">
+                    <input type="text" name="id" id="id"
+                    autocomplete="off" required>
+                    <label for="id">USER NAME</label>
+                </div>
+                <div class="int-area">
+                    <input type="password" name="pw" id="pw"
+                    autocomplete="off" required>
+                    <label for="pw">PASSWORD</label>
+                </div>
+                <div class="btn-area">
+                    <button id='btn'
+                    type="submit">LOGIN</button>
+                </div>
+            </form>
+            <!--
+            <div class="caption">
+                <a href="">Forgot password?</a>
+            </div>
+            -->
+        </section>
+        <script>
+            let id = $('#id');
+            let pw = $('#pw');
+            let btn = $('#btn');
+
+            $(btn).on('click', function(){
+                if($(id).val() == ""){
+                    $(id).next('label').addClass('warning');
+                    setTimeout(function() {
+                        $(label).removeClass('warning');
+                    }, 1500);
+                }
+                else if($(pw).val() == ""){
+                    $(pw).next('label').addClass('warning');
+                    setTimeout(function() {
+                        $(label).removeClass('warning');
+                    }, 1500);
+                }
+            });
+        </script>
+    </body>
+
+</html>
